@@ -22,9 +22,9 @@ const ResourcesPage = () => {
   );
 
   return (
-    <div className="container">
+    <div className="container-resources">
       <button onClick={navigateBack} className="button back-button">Back</button>
-      <h1>Resources for Small Businesses to Combat Climate Change</h1>
+      <h1>Resources for businesses to prepare for climate risks</h1>
       <div className="grid-container">
         {filteredResources.map((resource, index) => (
           <div key={index} className="card">

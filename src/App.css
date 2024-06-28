@@ -1,46 +1,102 @@
-/* App.css */
+html, body {
+  height: 100%;
+  margin: 0;
+}
 
 .container {
-  text-align: center;
-  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  height: 100vh;
   position: relative;
+  margin-left: 100px;
+}
+
+.container h1 {
+  margin-left: 15px;
+  font-size: 48px;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+.container-risks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  margin-left: 30px;
+}
+
+.container-risks p {
+  margin-bottom: 30px;
 }
 
 .button {
+  position: relative;
   padding: 10px 20px;
   margin: 10px;
-  border: none;
-  border-radius: 5px;
+  border: 2px solid #439746;
+  border-radius: 30px;
   cursor: pointer;
-  background-color: #007BFF;
-  color: white;
+  z-index: 1;
+  background-color: white;
+  color: black;
   font-size: 16px;
-  transition: background-color 0.3s;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.button:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #439746;
+  border-radius: 30px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+              7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+              4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .button:hover {
-  background-color: #0056b3;
+  color: white;
+}
+
+.button:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.start-button {
+  width: 200px;
+  height: 50px;
 }
 
 .back-button {
   position: absolute;
   top: 20px;
-  left: 20px;
-  background-color: #f44336;
+  left: -5px;
+  background-color: white;
 }
 
 .resources-button {
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color: #4CAF50;
+  background-color: white;
 }
 
 .iframe-container {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top: 56.25%;
+  padding-top: 51.25%;
 }
 
 .iframe {
@@ -48,32 +104,82 @@
   top: 0;
   left: 0;
   width: 90%;
-  height: 90%;
-  border: 1px;
+  height: 95%;
+  border: 3px solid black;
+  border-radius: 30px;
 }
 
 .risk-buttons-container {
   position: absolute;
-  right: 30px;
-  top: 100px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 40px;
 }
 
 .risk-button {
-  background-color: grey;
-  color: white;
-  padding: 10px;
+  background-color: rgb(199, 199, 199);
+  color: black;
+  padding: 15px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
-  margin-bottom: 10px;
+  font-size: 15px;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  position: relative;
+}
+
+.risk-button:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #439746;
+  border-radius: 30px;
+  transition: width 0.3s ease, left 0.3s ease;
+  width: 0;
+}
+
+.risk-button:hover:before {
+  width: 100%;
+}
+
+.risk-button:after {
+  left: 100%;
+}
+
+.risk-button:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.risk-button:hover {
+  color: white;
 }
 
 .risk-button.selected {
-  background-color: blue;
+  color: white;
+  background-color: #439746;
 }
+
+.container-resources {
+  margin-left: 30px;
+  margin-right: 10px;
+  text-align: center;
+  padding: 50px;
+  position: relative;
+}
+
+.container-resources h1 {
+  margin-top: 35px;
+}
+
 
 .grid-container {
   display: grid;
@@ -99,7 +205,7 @@
 
 .card a {
   text-decoration: none;
-  color: #007BFF;
+  color: #439746;
   font-weight: bold;
   transition: color 0.3s;
 }

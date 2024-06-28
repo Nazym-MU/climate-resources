@@ -15,11 +15,10 @@ const AssessRisks = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-risks">
       <button onClick={navigateBack} className="button back-button">Back</button>
       <button onClick={navigateToResources} className="button resources-button">See Resources</button>
-      <h1>Assess Your Climate Risks</h1>
-      <p>Use the tool below to assess your climate risks by typing your address. Then select the most significant risks from the list.</p>
+      <p>Use the tool below to assess your climate risks by typing your address. Then select the most significant risks from the list on the right.</p>
       <div className="iframe-container">
         <iframe
           src="https://riskfactor.com/"

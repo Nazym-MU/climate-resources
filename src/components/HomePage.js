@@ -10,8 +10,8 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <h1>Welcome to the Small Business Climate Change Resources</h1>
-      <button onClick={navigateToAssessRisks} className="button">Get Started</button>
+      <h1>Assess your climate risks</h1>
+      <button onClick={navigateToAssessRisks} className="button start-button">Get Started</button>
     </div>
   );
 };
