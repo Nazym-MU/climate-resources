@@ -8,12 +8,13 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  height: 100vh;
+  height: 40vh;
   position: relative;
   margin-left: 100px;
 }
 
 .container h1 {
+  margin-top: 175px;
   margin-left: 15px;
   font-size: 48px;
   font-family: 'Century Gothic', sans-serif;
@@ -29,21 +30,16 @@ html, body {
   margin-left: 30px;
 }
 
-.container-risks p {
-  margin-bottom: 30px;
-}
-
 .button {
   position: relative;
-  padding: 10px 20px;
-  margin: 10px;
+  margin-left: 10px;
   border: 2px solid #439746;
   border-radius: 30px;
   cursor: pointer;
   z-index: 1;
   background-color: white;
   color: black;
-  font-size: 16px;
+  font-size: 17px;
   overflow: hidden;
   transition: color 0.3s ease;
 }
@@ -75,7 +71,7 @@ html, body {
 
 .start-button {
   width: 200px;
-  height: 50px;
+  height: 45px;
 }
 
 .back-button {
@@ -83,6 +79,9 @@ html, body {
   top: 20px;
   left: -5px;
   background-color: white;
+  min-width: 100px;
+  min-height: 30px;
+  font-size: medium;
 }
 
 .resources-button {
@@ -90,11 +89,15 @@ html, body {
   top: 20px;
   right: 20px;
   background-color: white;
+  min-width: 100px;
+  min-height: 30px;
+  font-size: medium;
 }
 
 .iframe-container {
   position: relative;
   overflow: hidden;
+  margin-top: 20px;
   width: 100%;
   padding-top: 51.25%;
 }
@@ -177,21 +180,22 @@ html, body {
 }
 
 .container-resources h1 {
-  margin-top: 35px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
   justify-items: center;
 }
 
 .card {
   border: 1px solid #000000;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 20px;
   text-align: left;
 }
 
@@ -215,4 +219,46 @@ html, body {
 .card a:hover {
   color: #0056b3;
   text-decoration: underline;
+}
+
+.warning-text {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.wave-container {
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+}
+
+@keyframes moveWaves {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes moveWaveReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
