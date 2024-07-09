@@ -25,11 +25,18 @@ html, body {
 .container-risks {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 20px;
   height: 100vh;
-  position: relative;
-  margin-left: 30px;
+}
+
+.risk-buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .button {
@@ -71,109 +78,70 @@ html, body {
   width: 100%;
 }
 
+.button:disabled {
+  border: none;
+  color: white;
+  background-color: grey;
+  cursor: not-allowed;
+}
+
 .start-button {
   width: 200px;
   min-width: 120px;
   min-height: 50px;
 }
 
-.back-button {
-  position: absolute;
-  top: 20px;
-  left: -5px;
-  background-color: white;
-  min-width: 100px;
-  min-height: 30px;
-  font-size: medium;
-}
-
-.resources-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: white;
-  min-width: 100px;
-  min-height: 30px;
-  font-size: medium;
-}
-
-.iframe-container {
-  position: relative;
-  overflow: hidden;
-  margin-top: 20px;
-  width: 100%;
-  padding-top: 51.25%;
-  min-width: 300px;
-}
-
-.iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 90%;
-  height: 95%;
-  border: 3px solid black;
-  border-radius: 30px;
-}
-
-.risk-buttons-container {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
 .risk-button {
-  background-color: rgb(199, 199, 199);
+  background-color: white;
   color: black;
   padding: 15px 20px;
-  border: none;
+  border: black solid 1.5px;
+  min-width: 120px;
   border-radius: 30px;
   cursor: pointer;
   font-size: 15px;
-  z-index: 1;
-  overflow: hidden;
   transition: color 0.3s ease, background-color 0.3s ease;
-  position: relative;
-}
-
-.risk-button:before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-color: #00cba9;
-  border-radius: 30px;
-  transition: width 0.3s ease, left 0.3s ease;
-  width: 0;
-}
-
-.risk-button:hover:before {
-  width: 100%;
-}
-
-.risk-button:after {
-  left: 100%;
-}
-
-.risk-button:hover:after {
-  left: 0;
-  width: 100%;
-}
-
-.risk-button:hover {
-  color: white;
 }
 
 .risk-button.selected {
-  color: white;
   background-color: #00cba9;
+  color: white;
+  border: none;
 }
+
+.risk-button:hover {
+  background-color: #00cba9;
+  color: white;
+  border: none;
+}
+
+.resources-button {
+  background-color: white;
+  min-width: 40px;
+  font-size: medium;
+  min-height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin-top: 20px;
+}
+
+.iframe {
+  width: 90%;
+  height: 100%;
+  border: 3px solid black;
+  border-radius: 30px;
+  max-width: 100%;
+}
+
 
 .container-resources {
   margin-left: 30px;
@@ -223,13 +191,6 @@ html, body {
 .card a:hover {
   color: #0056b3;
   text-decoration: underline;
-}
-
-.warning-text {
-  color: red;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 10px;
 }
 
 .wave-container {

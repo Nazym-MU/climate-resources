@@ -5,37 +5,32 @@ import RiskButtons from './RiskButtons';
 const AssessRisks = () => {
   const navigate = useNavigate();
   const [selectedRisks, setSelectedRisks] = useState([]);
-  const [showWarning, setShowWarning] = useState(false);
-
-  const navigateBack = () => {
-    navigate('/');
-  };
 
   const navigateToResources = () => {
     if (selectedRisks.length > 0) {
       navigate('/resources', { state: { selectedRisks } });
-    } else {
-      setShowWarning(true);
     }
   };
 
   return (
     <div className="container-risks">
-      <button onClick={navigateBack} className="button back-button">Back</button>
-      <button onClick={navigateToResources} className="button resources-button">
-        Next
+      <button
+        onClick={navigateToResources}
+        className="button resources-button"
+        disabled={selectedRisks.length === 0}
+      >
+        <i class='arrow right'></i>
       </button>
+      <h1>Select the risks for your business from the list below:</h1>
+      <RiskButtons selectedRisks={selectedRisks} setSelectedRisks={setSelectedRisks} />
+      <p>Need help assessing your risks?</p>
       <div className="iframe-container">
         <iframe
           src="https://riskfactor.com/"
-          title="Risk Factor"
+          title="Riskfactor"
           className="iframe"
         ></iframe>
       </div>
-      <RiskButtons selectedRisks={selectedRisks} setSelectedRisks={setSelectedRisks} />
-      {showWarning && selectedRisks.length === 0 && (
-        <p className="warning-text">Select at least 1 risk type to proceed</p>
-      )}
     </div>
   );
 };
