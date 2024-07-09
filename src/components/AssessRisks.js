@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import RiskButtons from './RiskButtons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const AssessRisks = () => {
   const navigate = useNavigate();
   const [selectedRisks, setSelectedRisks] = useState([]);
+  const [showIframe, setShowIframe] = useState(false);
 
   const navigateToResources = () => {
     if (selectedRisks.length > 0) {
@@ -12,19 +15,29 @@ const AssessRisks = () => {
     }
   };
 
+  const toggleIframe = () => {
+    setShowIframe(!showIframe);
+  };
+
   return (
     <div className="container-risks">
       <button
         onClick={navigateToResources}
-        className="button resources-button"
+        className="resources-button"
         disabled={selectedRisks.length === 0}
       >
-        <i class='arrow right'></i>
+        <FontAwesomeIcon icon={faArrowRight} />
       </button>
-      <h1>Select the risks for your business from the list below:</h1>
-      <RiskButtons selectedRisks={selectedRisks} setSelectedRisks={setSelectedRisks} />
-      <p>Need help assessing your risks?</p>
-      <div className="iframe-container">
+      <div className="content">
+        <h1>Select the risks that your business faces:</h1>
+        <RiskButtons selectedRisks={selectedRisks} setSelectedRisks={setSelectedRisks} />
+        {!showIframe && (
+          <button className="help-button" onClick={toggleIframe}>
+            Need help assessing your risks?
+          </button>
+        )}
+      </div>
+      <div className={`iframe-container ${showIframe ? 'show' : ''}`}>
         <iframe
           src="https://riskfactor.com/"
           title="Riskfactor"

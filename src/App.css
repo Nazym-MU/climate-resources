@@ -28,13 +28,24 @@ html, body {
   align-items: center;
   padding: 20px;
   height: 100vh;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
 }
 
 .risk-buttons-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
+  margin-top: 15px;
   margin-bottom: 20px;
   width: 100%;
 }
@@ -78,13 +89,6 @@ html, body {
   width: 100%;
 }
 
-.button:disabled {
-  border: none;
-  color: white;
-  background-color: grey;
-  cursor: not-allowed;
-}
-
 .start-button {
   width: 200px;
   min-width: 120px;
@@ -123,25 +127,66 @@ html, body {
   position: absolute;
   top: 20px;
   right: 20px;
+  border: 2px solid #00cba9;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 1;
+  background-color: white;
+  color: black;
+  font-size: 17px;
+}
+
+.resources-button:hover {
+  transform: scale(1.05);
+}
+
+.resources-button:disabled {
+  border: none;
+  color: white;
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+
+.help-button {
+  border: 2px gray;
+  border-style: dashed;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 17px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  margin-bottom: 20px;
+}
+
+.help-button:hover {
+  transform: scale(1.05);
 }
 
 .iframe-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
-  margin-top: 20px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  transition: width 1s ease, height 1s ease;
+}
+
+.iframe-container.show {
+  width: 90vw;
+  height: 90vh;
 }
 
 .iframe {
-  width: 90%;
+  width: 100%;
   height: 100%;
   border: 3px solid black;
   border-radius: 30px;
-  max-width: 100%;
+  box-sizing: border-box;
 }
-
 
 .container-resources {
   margin-left: 30px;
