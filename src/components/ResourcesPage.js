@@ -71,7 +71,7 @@ const ResourcesPage = () => {
               <img src={resource.image} alt={resource.label} className="resource-image" />
               <div className="resource-details">
                 <h2>{resource.label}</h2>
-                <p className="resource-description"><strong>Description:</strong> {resource.description}</p>
+                <p className="resource-description">{resource.description}</p>
                 <p className="resource-eligibility"><strong>Eligibility:</strong> {resource.eligibility}</p>
               </div>
             </a>
