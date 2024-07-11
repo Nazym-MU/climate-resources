@@ -3,6 +3,7 @@ html, body {
   margin: 0;
   font-family: 'Century Gothic', sans-serif;
   overflow-x: hidden;
+  background-color: rgb(244, 240, 234);
 }
 
 .container {
@@ -38,6 +39,7 @@ html, body {
   justify-content: center;
   text-align: center;
   flex: 1;
+  margin: 20px 0;
 }
 
 .risk-buttons-container {
@@ -57,7 +59,7 @@ html, body {
   border-radius: 30px;
   cursor: pointer;
   z-index: 1;
-  background-color: white;
+  background-color: rgb(244, 240, 234);
   color: black;
   font-size: 17px;
   overflow: hidden;
@@ -96,7 +98,7 @@ html, body {
 }
 
 .risk-button {
-  background-color: white;
+  background-color: rgb(244, 240, 234);
   color: black;
   padding: 15px 20px;
   border: black solid 1.5px;
@@ -120,12 +122,11 @@ html, body {
 }
 
 .resources-button {
-  background-color: white;
+  background-color: rgb(244, 240, 234);
   min-width: 40px;
   font-size: medium;
   min-height: 40px;
   position: absolute;
-  top: 20px;
   right: 20px;
   border: 2px solid #00cba9;
   border-radius: 30px;
@@ -151,12 +152,12 @@ html, body {
 .help-button {
   border: 2px gray;
   border-style: dashed;
-  background-color: white;
+  background-color: rgb(244, 240, 234);
   padding: 10px 20px;
   border-radius: 30px;
   cursor: pointer;
   margin-top: 15px;
-  font-size: 17px;
+  font-size: 15px;
   transition: transform 0.5s ease, opacity 0.5s ease;
   margin-bottom: 20px;
 }
@@ -189,6 +190,7 @@ html, body {
 }
 
 .container-resources {
+  flex: 1;
   margin-left: 30px;
   margin-right: 10px;
   text-align: center;
@@ -213,7 +215,16 @@ html, body {
   border: 1px solid #000000;
   padding: 20px;
   border-radius: 20px;
+  text-decoration: none;
+  color: inherit;
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
 }
 
 .card h2 {
@@ -221,21 +232,54 @@ html, body {
   margin-bottom: 10px;
 }
 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.resource-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.resource-details {
+  padding: 15px;
+}
+
+.resource-description,
+.resource-eligibility {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
 .card p {
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-.card a {
-  display: block;
-  margin-top: 10px;
-  color: #00cba9;
-  text-decoration: none;
+.search-input {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  border-radius: 7px;
+  background-color: inherit;
 }
 
-.card a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.dropdown {
+  padding: 5px;
+  margin: 0 10px;
+  background-color: inherit;
+  border-radius: 7px;
+  font-size: 17px;
 }
 
 .wave-container {
@@ -253,4 +297,49 @@ html, body {
   width: 150%;
   height: 100%;
   pointer-events: none;
+}
+
+.header {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.header li {
+  margin: 0 50px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #000;
+}
+
+.header a:hover {
+  color: #00cba9;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgb(244, 240, 234);
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
 }
