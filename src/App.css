@@ -493,3 +493,60 @@ html, body {
   }
 }
 
+/* Mobile styles */
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .button, .risk-button, .resources-button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+  
+  .start-button {
+    width: 150px;
+    min-width: 100px;
+    min-height: 40px;
+  }
+
+  .risk-buttons-container {
+    gap: 10px;
+  }
+  
+  
+  .container-about p {
+    font-size: 1rem;
+  }
+  
+  .container-resources {
+    padding: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .card h2 {
+    font-size: 16px;
+  }
+  
+  .card p {
+    font-size: 12px;
+  }
+  
+  .top-image-container {
+    height: 200px;
+  }
+  
+  .top-image-text {
+    font-size: 20px;
+  }
+
+  .wave {
+    bottom: -25%;
+  }
+}
