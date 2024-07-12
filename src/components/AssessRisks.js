@@ -32,7 +32,7 @@ const AssessRisks = () => {
           >
             <FontAwesomeIcon icon={faArrowRight} />
           </button>
-          <div className="content-about">
+          <div className="content">
             <h1>Select the risks that your business faces:</h1>
             <RiskButtons selectedRisks={selectedRisks} setSelectedRisks={setSelectedRisks} />
             {!showIframe && (
