@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Climate Resources Toolkit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Usage](#usage)
+4. [Technologies Used](#technologies-used)
+5. [Acknowledgements](#acknowledgements)
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+Climate Resources Toolkit is a web application designed to help small businesses in San Francisco identify and manage risks related to climate change. Users can assess their risks through firststreet.com and find resources tailored to their specific needs, including grants, guides, and organizations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Risk Assessment**: Select and assess climate risks relevant to your business.
+- **Resource Search**: Find resources by keyword and filter by type.
+- **Interactive Iframe**: Embedded content from [firststreet.org](https://firststreet.org/) to help users understand risks.
+- **News Page**: Read the trending news about climate change.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+1. Open your web browser and navigate to `https://climate-action-toolkit.vercel.app/`.
+2. Use the risk assessment tool to identify relevant climate risks for your business.
+3. Search and filter resources to find the most useful information for managing your risks.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Frontend**: React, React Router, Axios
+- **Backend**: Node.js, Express, MongoDB
+- **Styling**: CSS
+- **API Integration**: RapidAPI
+- **Deployment**: Vercel (Frontend), Render (Backend)
 
-### `npm run eject`
+### Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contributions are welcome!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Acknowledgements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Thanks to Minerva University and our project partners for providing resources and guidance on building this platform.
+- We used firststreet.org (past riskfactor.com) website to help assess properties' climate risks.
