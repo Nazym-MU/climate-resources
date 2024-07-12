@@ -18,7 +18,7 @@ const ResourcesPage = () => {
   useEffect(() => {
     const fetchResources = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/climate-risk');
+        const response = await axios.get('https://climate-action-toolkit.onrender.com/climate-risk');
         const filteredResources = response.data.filter(resource =>
           resource.riskType.some(risk => selectedRisks.includes(risk))
         );
